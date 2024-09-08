@@ -6,41 +6,41 @@
   <title>Convertidor de Números a Letras</title>
   <!-- Incluimos Bootstrap desde el CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Archivo traductor.js -->
-    <script src="traductor.js"></script>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Archivo traductor.js -->
+  <script src="traductor.js"></script>
 </head>
 <body>
 
   <div class="container mt-5">
-    <h1 class="text-center">Convertidor de Números a Letras</h1>
+    <h1 class="text-center text-primary mb-4"><i class="bi bi-calculator"></i> Convertidor de Números a Letras</h1>
 
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center">
       <div class="col-md-6">
-        <!-- Formulario de entrada -->
-        <div class="card">
+        <!-- Tarjeta de entrada -->
+        <div class="card shadow-lg">
           <div class="card-body">
             <form id="formulario">
               <div class="mb-3">
-                <label for="numero" class="form-label">Ingresa un número</label>
-                <input type="number" class="form-control" id="numero" placeholder="Introduce un número" required>
+                <label for="numero" class="form-label"><i class="bi bi-pencil-square"></i> Ingresa un número</label>
+                <input type="number" class="form-control form-control-lg" id="numero" placeholder="Introduce un número" required>
               </div>
-              <button type="submit" class="btn btn-primary w-100">Convertir a Letras</button>
+              <button type="submit" class="btn btn-primary w-100 btn-lg"><i class="bi bi-arrow-right-circle-fill"></i> Convertir a Letras</button>
             </form>
 
             <!-- Sección para mostrar el resultado -->
             <div class="mt-4">
-              <h5>Resultado:</h5>
-              <p id="resultado" class="alert alert-info">Ingresa un número para ver el resultado aquí.</p>
+              <h5 class="text-secondary"><i class="bi bi-file-text"></i> Resultado:</h5>
+              <p id="resultado" class="alert alert-info text-center">Ingresa un número para ver el resultado aquí.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
 
   <!-- Script para manejar la interacción -->
   <script>
@@ -51,5 +51,6 @@
       document.getElementById('resultado').innerText = resultado;
     });
   </script>
+
 </body>
 </html>
