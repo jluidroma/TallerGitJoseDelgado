@@ -15,14 +15,14 @@
 </head>
 <body>
 
-  <div class="container mt-5">
+  <div class="container mt-5 mb-5">
     <h1 class="text-center text-primary mb-4"><i class="bi bi-calculator"></i> Convertidor de Números a Letras</h1>
 
     <div class="row justify-content-center">
       <div class="col-md-7">
         <!-- Tarjeta de entrada -->
         <div class="card shadow-lg border-secondary">
-          <div class="card-body" >
+          <div class="card-body">
             <form id="formulario">
               <div class="mb-4">
                 <label for="numero" class="form-label"><i class="bi bi-pencil-square"></i> Ingresa un número</label>
@@ -35,6 +35,12 @@
             <div class="mt-4">
               <h5 class="text-secondary"><i class="bi bi-file-text"></i> Resultado:</h5>
               <p id="resultado" class="alert alert-info text-center mb-2">Ingresa un número para ver el resultado aquí.</p>
+              <p id="resultado-en-ingles" class="alert alert-info text-center mb-2">La traducción al inglés aparecerá aquí.</p>
+            </div>
+
+            <!-- Botón para traducir -->
+            <div class="mt-4">
+              <button id="traducir" class="btn btn-secondary w-100 btn-lg"><i class="bi bi-translate"></i> Traducir a Inglés</button>
             </div>
           </div>
         </div>
@@ -49,6 +55,13 @@
       const numero = parseInt(document.getElementById('numero').value);
       const resultado = convertirNumeroALetras(numero);
       document.getElementById('resultado').innerText = resultado;
+    });
+
+    document.getElementById('traducir').addEventListener('click', function() {
+      const numero = parseInt(document.getElementById('numero').value);
+      const resultadoEnIngles = convertirNumeroALetrasEnIngles(numero);
+      const resultadoEnEspañol = document.getElementById('resultado').innerText;
+      document.getElementById('resultado-en-ingles').innerText = `${resultadoEnIngles}`;
     });
   </script>
 
