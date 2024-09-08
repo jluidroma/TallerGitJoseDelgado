@@ -50,10 +50,5 @@ if (numero < 1000000) return convertirMiles(numero);
 if (numero < 1000000000) return convertirMillones(numero);
 return 'Número fuera de rango';
 }
-
-console.log(convertirNumeroALetras(527));   
-console.log(convertirNumeroALetras(45));         
-console.log(convertirNumeroALetras(100));        
-console.log(convertirNumeroALetras(1234));       
-console.log(convertirNumeroALetras(123456));     
+   
  
